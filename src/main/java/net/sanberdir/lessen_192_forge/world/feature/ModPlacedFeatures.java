@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.CUSTOM_TREE.getHolder().get(),
                     List.of(PlacementUtils.filteredByBlockSurvival(InitBlocks.CUSTOM_SAPLING.get()))));
     public static final RegistryObject<PlacedFeature> CUSTOM_PLACED = PLACED_FEATURES.register("custom_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.CUSTOM_SPAWN.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(45),
+            () -> new PlacedFeature(ModConfiguredFeatures.CUSTOM_SPAWN.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(1),
                     InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {

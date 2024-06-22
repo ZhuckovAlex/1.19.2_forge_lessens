@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_plains",
+  "features": "lessen_192_forge:custom_placed",
+  "step": "vegetal_decoration"
+}

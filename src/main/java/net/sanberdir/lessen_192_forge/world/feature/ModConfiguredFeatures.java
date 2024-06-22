@@ -50,7 +50,7 @@ public class ModConfiguredFeatures {
             CONFIGURED_FEATURES.register("custom_spawn", () -> new ConfiguredFeature<>(Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(
                             ModPlacedFeatures.CUSTOM_CHECKED.getHolder().get(),
-                            0.5F)), ModPlacedFeatures.CUSTOM_CHECKED.getHolder().get())));
+                            0.8F)), ModPlacedFeatures.CUSTOM_CHECKED.getHolder().get())));
 
 
 
