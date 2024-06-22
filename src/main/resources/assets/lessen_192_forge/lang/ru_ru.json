@@ -1,0 +1,14 @@
+{
+  "block.lessen_192_forge.custom_planks": "Обыкновенные доски",
+  "block.lessen_192_forge.custom_log": "Обыкновенное бревно",
+  "block.lessen_192_forge.custom_leaves": "Обыкновенная листва",
+  "block.lessen_192_forge.custom_sapling": "Обыкновенный саженец",
+  "item.lessen_192_forge.custom_leaves": "Обыкновенная листва",
+  "item.lessen_192_forge.custom_sapling": "Обыкновенный саженец",
+  "block.lessen_192_forge.custom_wood": "Обыкновенная древесина",
+  "block.lessen_192_forge.stripped_custom_log": "Обтёсанное обыкновенное бревно",
+  "block.lessen_192_forge.stripped_custom_wood": "Обтёсанная обыкновенная древесина",
+  "item.lessen_192_forge.sweet_cake": "Сладкий пирог",
+  "item.lessen_192_forge.mini_coal": "Мини уголь",
+  "itemGroup.sweet_tab": "Сладкая вкладка"
+}
