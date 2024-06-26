@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "lessen_192_forge:block/custom_planks"
+  }
+}

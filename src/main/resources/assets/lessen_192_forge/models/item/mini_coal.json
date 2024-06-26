@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lessen_192_forge:item/mini_coal"
+  }
+}
