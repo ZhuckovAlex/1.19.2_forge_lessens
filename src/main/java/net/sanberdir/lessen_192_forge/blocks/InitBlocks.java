@@ -43,6 +43,18 @@ public class InitBlocks {
     public static final RegistryObject<Block> CUSTOM_SLAB = registerBlock("custom_slab",
             () -> new FlameSlabBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2).sound(SoundType.WOOD)), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> CUSTOM_BUTTON = registerBlock("custom_button",
+            () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                    .strength(1).sound(SoundType.WOOD)), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> CUSTOM_PRESSURE_PLATE = registerBlock("custom_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1).sound(SoundType.WOOD)), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> CUSTOM_DOOR = registerBlock("custom_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2).sound(SoundType.WOOD).noOcclusion()), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> CUSTOM_TRAPDOOR = registerBlock("custom_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2).sound(SoundType.WOOD).noOcclusion()), ModCreativeTab.SWEET_TAB);
     public static final RegistryObject<Block> CUSTOM_WOOD = registerBlock("custom_wood",
             () -> new FlameBlockRotate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(4.0F, 5.0F)
                     .sound(SoundType.STEM)), ModCreativeTab.SWEET_TAB);
