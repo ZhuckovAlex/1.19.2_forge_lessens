@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lessen_192_forge:block/custom_slab"
+    },
+    "type=double": {
+      "model": "lessen_192_forge:block/custom_planks"
+    },
+    "type=top": {
+      "model": "lessen_192_forge:block/custom_slab_top"
+    }
+  }
+}

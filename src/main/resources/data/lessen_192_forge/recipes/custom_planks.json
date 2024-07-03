@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "minecraft:custom_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "lessen_192_forge:custom_planks"
+  }
+}

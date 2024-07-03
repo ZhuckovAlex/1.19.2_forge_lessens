@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "lessen_192_forge:block/custom_planks",
+    "side": "lessen_192_forge:block/custom_planks",
+    "top": "lessen_192_forge:block/custom_planks"
+  }
+}

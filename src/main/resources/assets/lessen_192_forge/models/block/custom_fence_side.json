@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "lessen_192_forge:block/custom_planks"
+  }
+}
