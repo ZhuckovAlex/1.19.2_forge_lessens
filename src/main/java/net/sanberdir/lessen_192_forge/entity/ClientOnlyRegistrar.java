@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.sanberdir.lessen_192_forge.Lessen192Forge;
 import net.sanberdir.lessen_192_forge.ModWoodType;
+import net.sanberdir.lessen_192_forge.blocks.ModBlockEntities;
 import net.sanberdir.lessen_192_forge.entity.boat.ModBoatRenderer;
 import net.sanberdir.lessen_192_forge.entity.boat.ModEntityData;
 import net.sanberdir.lessen_192_forge.entity.chest_boat.ModChestBoatRenderer;
@@ -90,6 +91,7 @@ public class ClientOnlyRegistrar {
 
 
             registerEntityEvent.registerEntityRenderer(ModEntityData.MOD_CHEST_BOAT_DATA, ModChestBoatRenderer::new);
+            registerEntityEvent.registerBlockEntityRenderer(ModBlockEntities.SIGN_ENTITY_TYPE, SignRenderer::new);
 
         }
 
