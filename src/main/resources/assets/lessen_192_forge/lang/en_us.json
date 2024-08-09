@@ -18,5 +18,11 @@
   "block.lessen_192_forge.stripped_custom_wood": "Stripped custom wood",
   "item.lessen_192_forge.sweet_cake": "Sweet cake",
   "item.lessen_192_forge.mini_coal": "Mini coal",
+//  boats
+  "item.lessen_192_forge.custom_boat": "Custom boat",
+  "item.lessen_192_forge.custom_chest_boat": "Custom chest boat",
+  "entity.lessen_192_forge.mod_chest_boat_entity": "Chest boat",
+
+
   "itemGroup.sweet_tab": "Sweet tab"
 }
