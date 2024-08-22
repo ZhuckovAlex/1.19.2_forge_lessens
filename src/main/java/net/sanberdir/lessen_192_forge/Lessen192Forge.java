@@ -161,6 +161,8 @@ public class Lessen192Forge
             event.enqueueWork(() -> {
                 ComposterBlock.COMPOSTABLES.put(InitItems.CUSTOM_LEAVES.get(), 0.2f);
                 ComposterBlock.COMPOSTABLES.put(InitItems.CUSTOM_SAPLING.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(InitItems.WHEAT.get(), 0.4f);
+                ComposterBlock.COMPOSTABLES.put(InitItems.WHEAT_SEEDS.get(), 0.2f);
             });
         }
     }

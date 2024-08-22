@@ -26,6 +26,11 @@ public class InitBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Lessen192Forge.MODID);
 
+
+    public static final RegistryObject<Block> WHEAT = registerBlockWithoutBlockItem("wheat",
+            () -> new CustomWheat(BlockBehaviour.Properties.of(Material.PLANT).noCollission()
+                    .randomTicks().instabreak().sound(SoundType.GRASS)));
+
     public static final RegistryObject<Block> CUSTOM_PLANKS = registerBlock("custom_planks",
             () -> new FlameBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(4.0F, 5.0F)
                     .sound(SoundType.STEM)), ModCreativeTab.SWEET_TAB);
@@ -33,6 +38,7 @@ public class InitBlocks {
     public static final RegistryObject<Block> CUSTOM_LEAVES = registerBlockWithoutBlockItem("custom_leaves",
             () -> new FlameLeaves(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.GRASS).strength(0.1F, 1.0F)
                     .sound(SoundType.AZALEA_LEAVES).noOcclusion()));
+
     public static final RegistryObject<Block> CUSTOM_SAPLING = registerBlockWithoutBlockItem("custom_sapling",
             () -> new SaplingBlock(new CustomTree(), BlockBehaviour.Properties.of(Material.PLANT).noCollission()
                     .randomTicks().instabreak().sound(SoundType.GRASS)));

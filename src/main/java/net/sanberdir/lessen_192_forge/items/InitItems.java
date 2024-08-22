@@ -18,6 +18,14 @@ import net.sanberdir.lessen_192_forge.tab.ModCreativeTab;
 public class InitItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Lessen192Forge.MODID);
+
+    public static final RegistryObject<Item> WHEAT_SEEDS = ITEMS.register("wheat_seeds",
+            () -> new ItemNameBlockItem(InitBlocks.WHEAT.get(),
+                    new Item.Properties().tab(ModCreativeTab.SWEET_TAB)));
+
+    public static final RegistryObject<Item> WHEAT = ITEMS.register("wheat",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.SWEET_TAB)));
+
     public static final RegistryObject<Item> CUSTOM_LEAVES = ITEMS.register("custom_leaves",
             () -> new ItemNameBlockItem(InitBlocks.CUSTOM_LEAVES.get(),(new Item.Properties().tab(ModCreativeTab.SWEET_TAB))));
     public static final RegistryObject<Item> CUSTOM_SAPLING = ITEMS.register("custom_sapling",
@@ -34,6 +42,8 @@ public class InitItems {
                     .build())));
     public static final RegistryObject<Item> MINI_COAL = ITEMS.register("mini_coal",
             () -> new MiniCoal(new Item.Properties().tab(ModCreativeTab.SWEET_TAB)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
