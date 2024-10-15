@@ -39,12 +39,9 @@ import net.sanberdir.lessen_192_forge.items.InitItems;
 import net.sanberdir.lessen_192_forge.items.custom.CustomBoat;
 import net.sanberdir.lessen_192_forge.items.custom.CustomChestBoat;
 import net.sanberdir.lessen_192_forge.tab.ModCreativeTab;
+import net.sanberdir.lessen_192_forge.villager.ModVillagers;
 import net.sanberdir.lessen_192_forge.world.feature.ModConfiguredFeatures;
 import net.sanberdir.lessen_192_forge.world.feature.ModPlacedFeatures;
-
-import java.util.AbstractMap;
-import java.util.Collection;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Lessen192Forge.MODID)
@@ -63,7 +60,7 @@ public class Lessen192Forge
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        
+        ModVillagers.register(modEventBus);
         ITEMS.register(modEventBus);
         InitItems.register(modEventBus);
         InitBlocks.register(modEventBus);
@@ -82,7 +79,7 @@ public class Lessen192Forge
     {
         event.enqueueWork(() -> {
                WoodType.register(ModWoodType.CUSTOM_WOOD);
-
+               ModVillagers.registerPOIs();
         });
     }
 
