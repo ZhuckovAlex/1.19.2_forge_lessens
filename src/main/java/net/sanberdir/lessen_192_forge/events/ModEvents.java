@@ -32,13 +32,12 @@ public class ModEvents {
             // Получаем список торговых предложений для фермера
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             // Создаем предмет для торговли - обычные листья (1 штука)
-            ItemStack stack = new ItemStack(InitItems.CUSTOM_LEAVES.get(), 1);
             int villagerLevel = 1; // Устанавливаем уровень жителя, при котором доступно предложение
 
             // Добавляем новое торговое предложение для фермера на уровне 1
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.DIAMOND, 2), // Цена: 2 алмаза
-                    stack, // Что житель дает: 1 настраиваемый лист
+                    new ItemStack(Items.DIAMOND, 2), // Что покупаем
+                    new ItemStack(InitItems.CUSTOM_LEAVES.get(), 3), // Что продаём
                     10, // Максимальное количество сделок
                     8, // Максимальный опыт, который получит житель за сделку
                     0.02F)); // Шанс повышения цены
@@ -51,11 +50,9 @@ public class ModEvents {
 
             // Уровень 1: Продаёт настраиваемые листья
             int villagerLevel = 1;
-            ItemStack stack = new ItemStack(InitItems.CUSTOM_LEAVES.get(), 15);
-
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 5), // Цена: 5 изумрудов
-                    stack, // Что житель даёт: 15 настраиваемых листьев
+                    new ItemStack(InitItems.CUSTOM_LEAVES.get(), 15), // Что житель даёт: 15 настраиваемых листьев
                     10, // Максимальное количество сделок
                     8, // Максимальный опыт
                     0.02F)); // Шанс повышения цены
@@ -113,6 +110,42 @@ public class ModEvents {
                     PotionUtils.setPotion(new ItemStack(Items.LINGERING_POTION), Potions.STRONG_HEALING), // Покупает зелье исцеления
                     new ItemStack(Items.BOOK, 4), // Платит 4 книги
                     8, 10, 0));
+        }
+
+        if (event.getType() == ModVillagers.SHALKER_MASTER.get()) {
+            // Получаем список торговых предложений для "Fabricator Master"
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            // Уровень 1: Продаёт настраиваемые листья
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.ACACIA_LEAVES, 15), // Что житель даёт: 15 настраиваемых листьев
+                    new ItemStack(Items.EMERALD, 5), // Цена: 5 изумрудов
+                    10, // Максимальное количество сделок
+                    8, // Максимальный опыт
+                    0.02F)); // Шанс повышения цены
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5), // Цена: 5 изумрудов
+                    new ItemStack(Items.BLUE_SHULKER_BOX, 2), // Что житель даёт: 15 настраиваемых листьев
+                    10, // Максимальное количество сделок
+                    8, // Максимальный опыт
+                    0.02F)); // Шанс повышения цены
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5), // Цена: 5 изумрудов
+                    new ItemStack(Items.RED_SHULKER_BOX, 7), // Что житель даёт: 15 настраиваемых листьев
+                    10, // Максимальное количество сделок
+                    8, // Максимальный опыт
+                    0.02F)); // Шанс повышения цены
+
+            villagerLevel = 2;
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5), // Цена: 5 изумрудов
+                    new ItemStack(Items.RED_SHULKER_BOX, 2), // Что житель даёт: 15 настраиваемых листьев
+                    10, // Максимальное количество сделок
+                    8, // Максимальный опыт
+                    0.02F)); // Шанс повышения цены
         }
     }
 }
