@@ -9,15 +9,16 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.sanberdir.lessen_192_forge.Lessen192Forge;
 import net.sanberdir.lessen_192_forge.blocks.InitBlocks;
 import net.sanberdir.lessen_192_forge.items.custom.BurnFences;
 import net.sanberdir.lessen_192_forge.items.custom.MiniCoal;
 import net.sanberdir.lessen_192_forge.tab.ModCreativeTab;
 
+import static net.sanberdir.lessen_192_forge.Lessen192Forge.MODID;
+
 public class InitItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, Lessen192Forge.MODID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static final RegistryObject<Item> WHEAT_SEEDS = ITEMS.register("wheat_seeds",
             () -> new ItemNameBlockItem(InitBlocks.WHEAT.get(),
