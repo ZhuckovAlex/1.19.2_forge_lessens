@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "lessen_192_forge:block/custom_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "lessen_192_forge:block/custom_log"
+    },
+    "axis=z": {
+      "model": "lessen_192_forge:block/custom_log_horizontal",
+      "x": 90
+    }
+  }
+}

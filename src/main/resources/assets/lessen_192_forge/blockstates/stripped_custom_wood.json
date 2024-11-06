@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "lessen_192_forge:block/stripped_custom_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "lessen_192_forge:block/stripped_custom_wood"
+    },
+    "axis=z": {
+      "model": "lessen_192_forge:block/stripped_custom_wood",
+      "x": 90
+    }
+  }
+}

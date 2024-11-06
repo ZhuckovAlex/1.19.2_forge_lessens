@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "lessen_192_forge:block/custom_leaves"
+  },"render_type": "translucent"
+}

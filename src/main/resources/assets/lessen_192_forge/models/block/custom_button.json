@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "lessen_192_forge:block/custom_planks"
+  }
+}
