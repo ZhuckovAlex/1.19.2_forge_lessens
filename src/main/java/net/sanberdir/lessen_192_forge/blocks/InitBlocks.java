@@ -1,6 +1,7 @@
 package net.sanberdir.lessen_192_forge.blocks;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -79,7 +80,30 @@ public class InitBlocks {
     public static final RegistryObject<Block> STRIPPED_CUSTOM_WOOD = registerBlock("stripped_custom_wood",
             () -> new FlameBlockRotate(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(4.0F, 5.0F)
                     .sound(SoundType.STEM)), ModCreativeTab.SWEET_TAB);
-    
+
+
+    public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    // Количество опыта
+                    UniformInt.of(3, 7)), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    // Количество опыта
+                    UniformInt.of(3, 7)), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registerBlock("endstone_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    // Количество опыта
+                    UniformInt.of(3, 7)), ModCreativeTab.SWEET_TAB);
+    public static final RegistryObject<Block> NETHERRACK_ZIRCON_ORE = registerBlock("netherrack_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    // Количество опыта
+                    UniformInt.of(3, 7)), ModCreativeTab.SWEET_TAB);
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

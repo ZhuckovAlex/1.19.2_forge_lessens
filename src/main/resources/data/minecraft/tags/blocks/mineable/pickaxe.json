@@ -1,5 +1,8 @@
 {
   "values": [
-
+    "lessen_192_forge:zircon_ore",
+    "lessen_192_forge:endstone_zircon_ore",
+    "lessen_192_forge:netherrack_zircon_ore",
+    "lessen_192_forge:deepslate_zircon_ore"
   ]
 }

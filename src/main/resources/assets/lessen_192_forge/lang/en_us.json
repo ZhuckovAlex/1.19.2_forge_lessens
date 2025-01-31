@@ -13,6 +13,10 @@
   "block.lessen_192_forge.custom_wood": "Custom wood",
   "block.lessen_192_forge.stripped_custom_log": "Stripped custom log",
   "block.lessen_192_forge.stripped_custom_wood": "Stripped custom wood",
+  "block.lessen_192_forge.endstone_zircon_ore": "Zircon ore",
+  "block.lessen_192_forge.netherrack_zircon_ore": "Zircon ore",
+  "block.lessen_192_forge.deepslate_zircon_ore": "Zircon ore",
+  "block.lessen_192_forge.zircon_ore": "Zircon ore",
   "block.lessen_192_forge.wheat": "Wheat",
 
   "entity.lessen_192_forge.mod_chest_boat_entity": "Chest boat",

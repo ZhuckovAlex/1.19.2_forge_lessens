@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lessen_192_forge:block/netherrack_zircon_ore"
+  }
+}

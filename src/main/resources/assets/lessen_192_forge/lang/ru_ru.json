@@ -14,7 +14,10 @@
   "block.lessen_192_forge.stripped_custom_log": "Обтёсанное обыкновенное бревно",
   "block.lessen_192_forge.stripped_custom_wood": "Обтёсанная обыкновенная древесина",
   "block.lessen_192_forge.wheat": "Пшеница",
-
+  "block.lessen_192_forge.endstone_zircon_ore": "Цирконовая руда",
+  "block.lessen_192_forge.netherrack_zircon_ore": "Цирконовая руда",
+  "block.lessen_192_forge.deepslate_zircon_ore": "Цирконовая руда",
+  "block.lessen_192_forge.zircon_ore": "Цирконовая руда",
   "entity.lessen_192_forge.mod_chest_boat_entity": "Лодка с сундуком",
   "entity.minecraft.villager.lessen_192_forge.fabricator_master": "Фабрикант",
   "entity.minecraft.villager.lessen_192_forge.shalker_master": "Эксперт по шалкерам",
