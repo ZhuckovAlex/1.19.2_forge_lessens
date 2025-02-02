@@ -3,11 +3,15 @@ package net.sanberdir.lessen_192_forge.world.feature;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.GeodeBlockSettings;
+import net.minecraft.world.level.levelgen.GeodeCrackSettings;
+import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -73,6 +77,33 @@ public class ModConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_ZIRCON_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_ZIRCON_ORE = CONFIGURED_FEATURES.register("nether_zircon_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_ZIRCON_ORES.get(), 9)));
+
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ZIRCON_GEODE = CONFIGURED_FEATURES.register("zircon_geode",
+            () -> new ConfiguredFeature<>(Feature.GEODE, // Определяем, что это геодовая структура
+                    new GeodeConfiguration(
+                            new GeodeBlockSettings(
+                                    BlockStateProvider.simple(Blocks.AIR),                  // Внутреннее пространство геоды (пустота)
+                                    BlockStateProvider.simple(Blocks.DEEPSLATE),            // Внешняя оболочка геоды (например, из глубинного сланца)
+                                    BlockStateProvider.simple(InitBlocks.ZIRCON_ORE.get()), // Средний слой геоды (цирконовая руда)
+                                    BlockStateProvider.simple(Blocks.DIRT),                 // Дополнительный слой (например, грязь)
+                                    BlockStateProvider.simple(Blocks.EMERALD_BLOCK),        // Внутренний кристаллический слой (изумрудные блоки)
+                                    List.of(InitBlocks.CUSTOM_LOG.get().defaultBlockState()), // Особые блоки внутри геоды (например, кастомное бревно)
+                                    BlockTags.FEATURES_CANNOT_REPLACE, // Блоки, которые не могут быть заменены геодой
+                                    BlockTags.GEODE_INVALID_BLOCKS     // Блоки, внутри которых геода не может появиться
+                            ),
+                            new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D), // Настройки толщины слоев геоды
+                            new GeodeCrackSettings(0.25D, 1.5D, 1),  // Настройки трещин в геоде
+                            0.5D,  // Вероятность появления дополнительного заполнения внутри геоды
+                            0.1D,  // Шанс генерации геоды
+                            true,  // Может ли геода появляться на поверхности
+                            UniformInt.of(3, 8), // Количество рудных блоков внутри геоды
+                            UniformInt.of(2, 6), // Размер среднего слоя
+                            UniformInt.of(1, 2), // Размер внешнего слоя
+                            -32, 20, // Диапазон генерации геоды по высоте (от -18 до 18)
+                            0.075D, // Шанс появления геоды в чанке
+                            1       // Количество геод на чанк
+                    )));
 
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);

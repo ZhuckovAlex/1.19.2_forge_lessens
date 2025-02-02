@@ -35,6 +35,12 @@ public class ModPlacedFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.NETHER_ZIRCON_ORE.getHolder().get(), commonOrePlacement(15, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
+    public static final RegistryObject<PlacedFeature> ZIRCON_GEODE_PLACED = PLACED_FEATURES.register("zircon_geode_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.ZIRCON_GEODE.getHolder().get(), List.of(
+                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
+                    BiomeFilter.biome())));
+
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
